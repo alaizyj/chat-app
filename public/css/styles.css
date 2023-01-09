@@ -1,0 +1,374 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem;
+}
+
+
+/* login page */
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-img {
+    width: 100%;
+}
+
+h1 {
+    color: #0070ff;
+    margin: 1rem auto;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.login-label {
+    margin-right: auto;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6699cc;
+}
+
+#login-input {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+}
+
+.login-button {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #6699cc;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #0070ff;
+}
+
+
+/* spinner */
+
+.fetchinglogin-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.login-spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+.fetchingmessage-div,
+.fetching-div {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    align-items: center;
+}
+
+.message-spinner,
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #0070ff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+
+/* chat page */
+
+.chat-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.chat-container {
+    display: grid;
+    grid-template-areas: "users" "messages";
+    margin-bottom: 2rem;
+    width: 95%;
+}
+
+
+/* chat page - user list */
+
+.users-section {
+    grid-area: users;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.users-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.empty-message {
+    text-align: center;
+}
+
+.single-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.25rem auto 0.5rem 0.5rem;
+    list-style-type: none;
+}
+
+.user-avatar {
+    height: 60px;
+    width: 60px;
+}
+
+.user-name {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+
+/* chat page - message list */
+
+.messages-section {
+    grid-area: messages;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.messages-list {
+    margin-bottom: 2rem;
+}
+
+.single-message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.message-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+
+.message-avatar {
+    height: 40px;
+    width: 40px;
+}
+
+.message-username {
+    font-size: 0.8rem;
+    margin-left: 0.25rem;
+}
+
+.user-message {
+    padding: 0.5rem;
+    margin-left: 3rem;
+    margin-right: auto;
+    background-color: green;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.message-content {
+    padding: 0.5rem;
+    margin-left: 3rem;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* chat page - input */
+
+.chatinput-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-label {
+    margin-right: auto;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6699cc;
+}
+
+#chat-input {
+    padding: 0.8rem 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    font-size: 1.1rem;
+}
+
+.send-button {
+    padding: 0.8rem;
+    margin-top: 1rem;
+    background-color: #6699cc;
+    color: white;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    width: 80px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #0070ff;
+}
+
+.logout-button {
+    padding: 0.8rem;
+    margin-top: 1rem;
+    background-color: #0070ff;
+    color: white;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    width: 80px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #6699cc;
+}
+
+
+/* error */
+
+.error-message {
+    margin-top: 1rem;
+    color: red;
+}
+
+
+/* adaptive design */
+
+@media (min-width:600px) {
+    .login-img {
+        width: 60%;
+        height: auto;
+    }
+}
+
+@media(min-width: 750px) {
+    .login-img {
+        width: 50%;
+        height: auto;
+    }
+    .login-form {
+        flex-direction: row;
+    }
+    .login-label,
+    .chat-label {
+        margin-bottom: 0;
+    }
+    #login-input,
+    #chat-input {
+        margin-left: 1rem;
+    }
+    .login-button,
+    .send-button {
+        margin-left: 1rem;
+        margin-top: 0;
+    }
+    .chat-container {
+        grid-template-areas: "users messages";
+        grid-template-columns: 1fr 2fr;
+    }
+    .chat-form {
+        flex-direction: row;
+    }
+    .users-section,
+    .messages-section {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media (min-width:1000px) {
+    .chat-container {
+        grid-template-areas: "users messages";
+        grid-template-columns: 2fr 5fr;
+    }
+}
+
+@media (min-width:1200px) {
+    .chat-container {
+        grid-template-areas: "users messages";
+        grid-template-columns: 3fr 10fr;
+    }
+}
+
+@media (min-width:1500px) {
+    .chat-container {
+        grid-template-areas: "users messages";
+        grid-template-columns: 1fr 5fr;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
